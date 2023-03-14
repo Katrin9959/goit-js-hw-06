@@ -16,8 +16,8 @@ const ingredients = [
   let ulList = document.getElementById("ingredients");
   const foodIngredients = ingredients.forEach(ingredient => {
     let items = document.createElement("li");
-  //  li.classList.add('item')
-  // li.classList.toggle("item")
+    items.classList.add('item')
+ 
     items.innerHTML = ingredient;
     ulList.append(items);
     
