@@ -13,14 +13,22 @@ const ingredients = [
 // Після чого, вставить усі <li> за одну операцію у список ul#ingredients.
 
 
-  let ulList = document.getElementById("ingredients");
-  const foodIngredients = ingredients.forEach(ingredient => {
-    let items = document.createElement("li");
-    items.classList.add('item')
+  // let ulList = document.getElementById("ingredients");
+  //   ingredients.forEach(ingredient => {
+  //   let items = document.createElement("li");
+  //   items.classList.add('item')
  
-    items.innerHTML = ingredient;
-    ulList.append(items);
+  //   items.innerHTML = ingredient;
+  //   ulList.append(items);
     
-  });
-  
-  console.log(foodIngredients);
+  // });
+
+  let ulList = document.getElementById("ingredients");
+  const elements = []
+  ingredients.forEach(ingredient => {
+      let items = document.createElement("li");
+      items.innerHTML = ingredient
+      items.classList.add('item')
+      elements.push(items)
+    })
+    ulList.append(...elements);

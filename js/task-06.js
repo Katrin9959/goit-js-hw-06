@@ -9,7 +9,7 @@ let totalLenght = inputVal.getAttribute("data-length");
 let intTotallenght = parseInt(totalLenght, 10);
 
 inputVal.onblur = function() {
-  if (inputVal.value.length >= intTotallenght) {
+  if (inputVal.value.length === intTotallenght) {
     inputVal.classList.remove("invalid");
     inputVal.classList.add("valid");
   } else {
